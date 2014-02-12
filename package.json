@@ -1,0 +1,16 @@
+{
+  "name": "jaxcat",
+  "version": "0.0.0",
+  "description": "Sample MEAN app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "omer wazir",
+  "license": "MIT",
+  "dependencies": {
+    "jade": "~1.1.5",
+    "express": "~3.4.8"
+  }
+}
