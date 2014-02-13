@@ -1,0 +1,25 @@
+{
+  "name": "omerlovescandy_app",
+  "version": "0.0.0",
+  "homepage": "https://github.com/thewazir/omerlovescandy_app",
+  "authors": [
+    "omer.wazir <omer.wazir@gmail.com>"
+  ],
+  "description": "MEAN app for omerlovescandy.com",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.12",
+    "jquery": "~2.1.0",
+    "toastr": "~2.0.1",
+    "angular-resource": "~1.2.12",
+    "angular-route": "~1.2.12"
+  }
+}
