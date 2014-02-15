@@ -1,1 +1,3 @@
-{ "development" : "public/server" }
+{ 
+	"directory" : "public/vendor" 
+}

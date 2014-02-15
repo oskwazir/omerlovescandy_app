@@ -30,9 +30,67 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="public\vendor\angular-resource\angular-resource.js" />
+    <Compile Include="public\vendor\angular-resource\angular-resource.min.js" />
+    <Compile Include="public\vendor\angular-route\angular-route.js" />
+    <Compile Include="public\vendor\angular-route\angular-route.min.js" />
+    <Compile Include="public\vendor\angular\angular.js" />
+    <Compile Include="public\vendor\angular\angular.min.js" />
+    <Compile Include="public\vendor\jquery\jquery-migrate.js" />
+    <Compile Include="public\vendor\jquery\jquery-migrate.min.js" />
+    <Compile Include="public\vendor\jquery\jquery.js" />
+    <Compile Include="public\vendor\jquery\jquery.min.js" />
+    <Compile Include="public\vendor\toastr\toastr.js" />
+    <Compile Include="public\vendor\toastr\toastr.min.js" />
     <Compile Include="server.js" />
+    <Content Include=".bowerrc" />
+    <Content Include="bower.json" />
     <Content Include="package.json" />
+    <Content Include="public\css\site.styl" />
+    <Content Include="public\vendor\angular-resource\.bower.json" />
+    <Content Include="public\vendor\angular-resource\angular-resource.min.js.map" />
+    <Content Include="public\vendor\angular-resource\bower.json" />
+    <Content Include="public\vendor\angular-resource\README.md" />
+    <Content Include="public\vendor\angular-route\.bower.json" />
+    <Content Include="public\vendor\angular-route\angular-route.min.js.map" />
+    <Content Include="public\vendor\angular-route\bower.json" />
+    <Content Include="public\vendor\angular-route\README.md" />
+    <Content Include="public\vendor\angular\.bower.json" />
+    <Content Include="public\vendor\angular\angular-csp.css" />
+    <Content Include="public\vendor\angular\angular.min.js.gzip" />
+    <Content Include="public\vendor\angular\angular.min.js.map" />
+    <Content Include="public\vendor\angular\bower.json" />
+    <Content Include="public\vendor\angular\README.md" />
+    <Content Include="public\vendor\jquery\.bower.json" />
+    <Content Include="public\vendor\jquery\.gitignore" />
+    <Content Include="public\vendor\jquery\bower.json" />
+    <Content Include="public\vendor\jquery\component.json" />
+    <Content Include="public\vendor\jquery\composer.json" />
+    <Content Include="public\vendor\jquery\jquery.min.map" />
+    <Content Include="public\vendor\jquery\package.json" />
+    <Content Include="public\vendor\jquery\README.md" />
+    <Content Include="public\vendor\toastr\.bower.json" />
+    <Content Include="public\vendor\toastr\bower.json" />
+    <Content Include="public\vendor\toastr\toastr.css" />
+    <Content Include="public\vendor\toastr\toastr.min.css" />
+    <Content Include="public\vendor\toastr\toastr.min.js.map" />
     <Content Include="README.md" />
+    <Content Include="server\includes\scripts.jade" />
+    <Content Include="server\views\index.jade" />
+    <Content Include="server\includes\layout.jade" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\" />
+    <Folder Include="public\css\" />
+    <Folder Include="public\vendor\" />
+    <Folder Include="public\vendor\angular-resource\" />
+    <Folder Include="public\vendor\angular-route\" />
+    <Folder Include="public\vendor\angular\" />
+    <Folder Include="public\vendor\jquery\" />
+    <Folder Include="public\vendor\toastr\" />
+    <Folder Include="server\" />
+    <Folder Include="server\includes\" />
+    <Folder Include="server\views\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
   <ProjectExtensions>
