@@ -1,3 +1,5 @@
 .panel.panel-primary
 	.panel-heading.text-center Featured Candy
-	.panel-body Body Goes Here
+	.panel-body
+		.row(ng-repeat="candy in candy | filter:{featured:true}")
+			.col-md-12 {{ candy.name }}
