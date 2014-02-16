@@ -13,3 +13,12 @@ h6,
 .h6 {
   font-family: "fira-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+body {
+  padding-top: 61px;
+}
+footer {
+  padding: 0px 15px;
+}
+footer p {
+  border-top: 1px solid #d7e0e2;
+}
