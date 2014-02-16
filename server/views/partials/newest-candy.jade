@@ -2,5 +2,5 @@
 	.panel-heading.text-center Newest Candy
 	.panel-body
 		.row(ng-repeat="candy in candy | orderBy:'dateAdded':true | limitTo:10")
-			.col-md-3 {{ candy.dateAdded | date:'MMM d'}}
-			.cold-md-9 {{ candy.name }}
+			.col-xs-3 {{ candy.dateAdded | date:'MMM d'}}
+			.cold-xs-9 {{ candy.name }}
