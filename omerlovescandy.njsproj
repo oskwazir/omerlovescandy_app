@@ -30,6 +30,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="public\app\app.js" />
     <Compile Include="public\vendor\angular-resource\angular-resource.js" />
     <Compile Include="public\vendor\angular-resource\angular-resource.min.js" />
     <Compile Include="public\vendor\angular-route\angular-route.js" />
@@ -78,10 +79,12 @@
     <Content Include="server\includes\scripts.jade" />
     <Content Include="server\views\index.jade" />
     <Content Include="server\includes\layout.jade" />
+    <Content Include="server\views\partials\main.jade" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public\" />
     <Folder Include="public\css\" />
+    <Folder Include="public\app\" />
     <Folder Include="public\vendor\" />
     <Folder Include="public\vendor\angular-resource\" />
     <Folder Include="public\vendor\angular-route\" />
@@ -91,6 +94,7 @@
     <Folder Include="server\" />
     <Folder Include="server\includes\" />
     <Folder Include="server\views\" />
+    <Folder Include="server\views\partials\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
   <ProjectExtensions>
