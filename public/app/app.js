@@ -1,15 +1,10 @@
-﻿angular.module('myApp',['ngResource','ngRoute']);
+﻿angular.module('candyApp',['ngResource','ngRoute']);
 
-angular.module('myApp').config(function($routeProvider,$locationProvider){
+angular.module('candyApp').config(function($routeProvider,$locationProvider){
     $locationProvider.html5Mode(true);
     $routeProvider
     .when('/', {
         templateUrl: '/partials/main',
-        controller: 'mainCtrl'
+        controller: 'candyMainCtrl'
         });
-    });
-
-angular.module('myApp').controller('mainCtrl', function($scope,$log){
-    $scope.myVar = 'Hello Angular'; 
-    $log.log('Created Main Controller');
     });
