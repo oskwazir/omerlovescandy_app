@@ -1,2 +1,10 @@
-﻿h1 This is a partial
-h2 {{ myVar  }}
+﻿.container
+	.jumbotron
+		h1 Welcome!
+		p  Here you can find an exciting showcase of candy from all over the world!
+
+	.row
+		.col-md-6
+			div(ng-include="'/partials/featured-candy'")
+		.col-md-6
+			div(ng-include="'/partials/newest-candy'")
