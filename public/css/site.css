@@ -21,11 +21,11 @@ footer {
   padding: 0px 15px;
 }
 footer p {
-  border-top: 1px solid #d7e0e2;
+  border-top: 1px solid #eee8d5;
 }
 .navbar-inverse {
   background-color: #b58900;
-  border-color: #cf9c00;
+  border-color: #b58900;
 }
 .jumbotron,
 .panel {
@@ -47,4 +47,8 @@ footer p {
 }
 .navbar-form button {
   margin-left: 10px;
+}
+.btn-primary {
+  background-color: #d33682;
+  border-color: #d33682;
 }
