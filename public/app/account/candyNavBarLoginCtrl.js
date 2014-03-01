@@ -1,5 +1,11 @@
-angular.module('candyApp').controller('candyNavBarLoginCtrl', function($scope){
+angular.module('candyApp').controller('candyNavBarLoginCtrl', function($scope,$http){
     $scope.signin = function(username,password){
-        console.log('Login code not done')
+        $http.post('/login', {username:username, password:password}).then(function(response){
+            if(response.data.success){
+                console.log('logged in!');
+            } else {
+                console.log('failed to log in!');
+            }
+        })
     };
 });
