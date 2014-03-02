@@ -1,10 +1,12 @@
-angular.module('candyApp').factory('candyAuth', function($http,candyIdentity,$q){
+angular.module('candyApp').factory('candyAuth', function($http,$q,candyIdentity,candyUser){
 	return {
 		authenticateUser: function(username,password){
 			var dfd = $q.defer();
 	        $http.post('/login', {username:username, password:password}).then(function(response){
 	            if(response.data.success){
-	            	candyIdentity.currentUser = response.data.user; 	
+                    var user = new candyUser();
+                    angular.extend(user, response.data.user);
+	            	candyIdentity.currentUser = user; 	
 	            	dfd.resolve(true);
 	            } else {
 	            	dfd.resolve(false);
