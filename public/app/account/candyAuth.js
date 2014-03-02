@@ -24,6 +24,14 @@ angular.module('candyApp').factory('candyAuth', function($http,$q,candyIdentity,
     		})
 
     		return dfd.promise;
-    	}
+    	},
+
+        authorizeCurrentUserForRoute: function(role){
+            if(candyIdentity.isAuthorized(role)){
+                return true;
+            } else {
+                return $q.reject('not authorized'); 
+            }
+        }
 	}
 });

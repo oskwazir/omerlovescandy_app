@@ -1,6 +1,12 @@
 ﻿angular.module('candyApp',['ngResource','ngRoute']);
 
 angular.module('candyApp').config(function($routeProvider,$locationProvider){
+    var routeRoleChecks = {
+        admin: { auth: function(candyAuth){
+               return candyAuth.authorizeCurrentUserForRoute('admin');
+            }}
+    }
+
     $locationProvider.html5Mode(true);
     $routeProvider
     .when('/', {
@@ -9,17 +15,7 @@ angular.module('candyApp').config(function($routeProvider,$locationProvider){
         })
     .when('/admin/users', {
         templateUrl: '/partials/admin/users-list',
-        controller: 'candyUserListCtrl',
-        resolve: {
-            auth: function(candyIdentity, $q){
-                if(candyIdentity.currentUser && candyIdentity.currentUser.roles.indexOf('admin') > -1){
-                    return true;
-                } else {
-                    return $q.reject('not authorized'); 
-                }
-
-            }
-        }
+        controller: 'candyUserListCtrl', resolve: routeRoleChecks.admin
     });
 });
 
