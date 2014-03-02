@@ -12,6 +12,16 @@ angular.module('candyApp').factory('candyAuth', function($http,candyIdentity,$q)
 	    	});
 
     		return dfd.promise;
+    	},
+
+    	logoutUser: function(){
+    		var dfd = $q.defer();
+    		$http.post('/logout', {logout:true}).then(function(){
+    			candyIdentity.currentUser = undefined;
+    			dfd.resolve();
+    		})
+
+    		return dfd.promise;
     	}
 	}
 });
