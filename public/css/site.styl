@@ -3,14 +3,20 @@ yellow = #b58900
 base03 = #fdf6e3
 base02 = #eee8d5
 white = #FFFFFF
+typekitSans= "anago"
 
 body,h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
-	font-family:"fira-sans","Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family : typekitSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body
 	padding-top 61px
 	background-color base03
+	font-weight 400
+	font-size 16px
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6
+	font-weight 800
 
 footer
 	padding 0px 15px
@@ -25,11 +31,15 @@ footer
 .panel
 	background-color base02
 
-.panel-primary	
-.panel-primary>.panel-heading
+.panel-primary, .panel-primary>.panel-heading
 	border-color magenta
 
+.navbar-brand, .panel-primary>.panel-heading
+	font-weight 500
+	letter-spacing 1px
+	
 .panel-primary>.panel-heading
+	font-size 18px
 	background-color magenta
 
 .navbar-inverse .navbar-brand
