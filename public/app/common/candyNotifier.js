@@ -9,6 +9,10 @@ angular.module('candyApp').factory('candyNotifier', function(candyToastr){
 		error: function(msg){
 			candyToastr.error(msg);
 			console.log(msg);
+		},
+		notify: function(msg){
+			candyToastr.info(msg);
+			console.log(msg);
 		}
 	}	
 });

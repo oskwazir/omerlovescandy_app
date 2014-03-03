@@ -16,6 +16,20 @@ angular.module('candyApp').factory('candyAuth', function($http,$q,candyIdentity,
     		return dfd.promise;
     	},
 
+        createUser: function(newUserData){
+            var newUser = new candyUser(newUserData);
+            var dfd = $q.defer();
+
+            newUser.$save().then(function(){
+                candyIdentity.currentUser = newUser;
+                dfd.resolve();
+            }, function(response){
+                dfd.reject(response.data.reason);
+            });
+
+            return dfd.promise;
+        },
+
     	logoutUser: function(){
     		var dfd = $q.defer();
     		$http.post('/logout', {logout:true}).then(function(){
@@ -31,6 +45,13 @@ angular.module('candyApp').factory('candyAuth', function($http,$q,candyIdentity,
                 return true;
             } else {
                 return $q.reject('not authorized'); 
+            }
+        },
+        authorizeAuthenticatedUserForRoute: function(){
+            if(candyIdentity.isAuthenticated()){
+                return true;
+            } else {
+                return $q.reject('not authenticated');
             }
         }
 	}
