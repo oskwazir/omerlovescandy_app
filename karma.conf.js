@@ -18,8 +18,8 @@ module.exports = function(config) {
         'public/vendor/angular-resource/angular-resource.min.js',
         'public/vendor/angular-mocks/angular-mocks.js',
         'test/test-app.js',
-      'public/app/**/*.js',
-      'tests/tests/**/*.js'
+        'public/app/**/*.js',
+        'test/specs/**/*.js'
     ],
 
 
