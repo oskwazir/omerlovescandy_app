@@ -3,7 +3,7 @@ angular.module('candyApp').controller('candySignupCtrl',
 
         $scope.signup = function(){
             var newUserData = {
-                username: $scope.email,
+                userName: $scope.email,
                 password: $scope.password,
                 firstName: $scope.fname,
                 lastName: $scope.lname
