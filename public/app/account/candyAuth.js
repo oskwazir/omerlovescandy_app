@@ -30,6 +30,22 @@ angular.module('candyApp').factory('candyAuth', function($http,$q,candyIdentity,
             return dfd.promise;
         },
 
+
+        updateCurrentUser: function(newUserData){
+            var dfd = $q.defer();
+
+            var clone = angular.copy(candyIdentity.currentUser);
+            angular.extend(clone, newUserData);
+            clone.$update().then(function(){
+                candyIdentity.currentUser = clone;
+                dfd.resolve();
+            }, function(response){
+                dfd.reject(response.data.reason);
+            });
+
+            return dfd.promise;
+        },
+
     	logoutUser: function(){
     		var dfd = $q.defer();
     		$http.post('/logout', {logout:true}).then(function(){
